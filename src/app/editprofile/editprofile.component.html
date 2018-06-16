@@ -1,0 +1,88 @@
+<div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a  ><span class="logo_colour" (click)="onLogin()">monu_techguru</span></a></h1>
+          
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a  (click)="updateLog()">Save</a></li>
+          <li class="selected"><a  (click)="viewProfile()">View Profile</a></li>
+          <li><a  (click)="changePassword()">Change Password</a></li>
+          <li><a  (click)="onLogin()" style="color:red">Logout</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">   <!-- Start Body part -->
+      
+
+
+
+            <div class="container">
+
+ <h1>Edit Profile</h1>
+<div class="form-container">
+
+       
+        <div class="form-group">
+            <label >Email Id</label>
+            <input type="email" [(ngModel)]="emailId" class="form-control"  required />
+        </div>
+        
+        <div class="form-group">
+            <label >Username</label>
+            <input type="text" [(ngModel)]="userName" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label >Password</label>
+            <input type="text" [(ngModel)]="password" class="form-control" required />
+        </div>
+        
+        <div class="form-group">
+            <label >Mobile Number</label>
+            <input type="Number" [(ngModel)]="mobileNo" class="form-control" required />
+        </div>
+        
+        <div class="form-group">
+            <label >city</label>
+            <input type="text" [(ngModel)]="city" class="form-control" required />
+        </div>
+        
+        <div class="form-group"  >
+            <label >Gender</label>
+            <div class="container  form-control">
+            <input type="radio" [(ngModel)]="gender" value="Male">Male
+            <input type="radio" [(ngModel)]="gender" value="Female">Female</div>
+        </div>
+        <div class="form-group">
+            <label >Address</label>
+            <input type="textarea" [(ngModel)]="address" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" (click)="updateLog()">Save</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="viewProfile()">View Profile</button>
+        </div>
+    
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    </div>      <!-- End Body part -->
+    <div id="footer">
+      <p><a (click)="updateLog()">Save</a> | <a (click)="viewProfile()">View Profile</a> | <a (click)="changePassword()">Change Password</a> | <a (click)="onLogin()" style="color:red">Logout</a> </p>
+    </div>
+  </div>
