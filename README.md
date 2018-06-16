@@ -1,3 +1,14 @@
+## App
+![alt tag](https://github.com/monilpshah/Login-Page-Project/blob/master/Login%20Page.jpg)
+## App
+![alt tag](https://github.com/monilpshah/Login-Page-Project/blob/master/Signup%20Page.jpg)
+## App
+![alt tag](https://github.com/monilpshah/Login-Page-Project/blob/master/Forgot%20%20Password%20Page.jpg)
+## App
+![alt tag](https://github.com/monilpshah/Login-Page-Project/blob/master/View%20Profile.jpg)
+## App
+![alt tag](https://github.com/monilpshah/Login-Page-Project/blob/master/Change%20Password.jpg)
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
