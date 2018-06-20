@@ -13,7 +13,7 @@ import { getallcategory } from './getallcategory';
   styleUrls: ['./viewproduct.component.css']
 })
 export class ViewproductComponent implements OnInit {
-
+  emailId:string;
   Id:number;
   Name:string;
   Price:number;
@@ -40,6 +40,7 @@ export class ViewproductComponent implements OnInit {
 
 
   ngOnInit() {
+    this.emailId=localStorage.getItem('emailId');
         this._xyz.getAllProducts().subscribe(
           (data:any)=>{
             this.carr=data;
@@ -74,4 +75,19 @@ export class ViewproductComponent implements OnInit {
     this._route.navigate(['/productdetails',Id]);
   }
 
+  editProfile(){
+    this._route.navigate(['/editprofile']);
+}
+
+  viewProfile(){
+    this._route.navigate(['viewprofile']);
+  }
+  onmonutechguru(){
+    this._route.navigate(['viewproduct']);
+  }
+
+  onLogout(){
+    localStorage.clear();
+    this._route.navigate(['/login']);
+  }
 }

@@ -27,12 +27,12 @@ emailId:string;
   confirmPassword:string;
 
   ngOnInit() {
-this.emailId=this._acroute.snapshot.params['emailId'];
+this.emailId=localStorage.getItem('emailId');
     this._xyz.getLogById(this.emailId).subscribe(
       (data:any)=>
       {
         this.oldPassword1=data[0].password;
-       
+
 
       }
     );
@@ -40,17 +40,17 @@ this.emailId=this._acroute.snapshot.params['emailId'];
   }
 
   viewProfile(){
-            this._route.navigate(['/viewprofile',this.emailId]);
+            this._route.navigate(['/viewprofile']);
     }
 
     editProfile(){
-            this._route.navigate(['/editprofile',this.emailId]);
+            this._route.navigate(['/editprofile']);
   }
   onLogin()
 {
     this._route.navigate(['/login']);
 
-    
+
 }
 
 onChange()
@@ -68,7 +68,7 @@ onChange()
                             }
                           );
                           this._route.navigate(['/login']);
-                      
+
                     }
                     else
                     {
@@ -79,5 +79,11 @@ onChange()
         alert("Password Mismatch.. \n Confirm that both passwords are same.");
         }
 }
-
+onHome(){
+  this._route.navigate(['/viewproduct']);
+}
+onLogout(){
+  localStorage.clear();
+  this._route.navigate(['/login']);
+}
 }

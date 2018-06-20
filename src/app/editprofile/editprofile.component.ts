@@ -12,8 +12,8 @@ import { LoginService } from '../login.service';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent implements OnInit {
-  
-  
+
+
    emailId:string;
   userName:string;
   password:string;
@@ -27,12 +27,12 @@ export class EditprofileComponent implements OnInit {
   constructor(private _route:Router,private _xyz:EditprofileService,private _acroute:ActivatedRoute,private _serv:LoginService) { }
 
   ngOnInit() {
-    this.emailId=this._acroute.snapshot.params['emailId'];
+    this.emailId=localStorage.getItem('emailId');
     console.log(this.emailId);
     this._xyz.getLogById(this.emailId).subscribe(
       (data:any)=>
       {
-        
+
         this.emailId=data[0].emailId;
         this.userName=data[0].userName;
         this.password=data[0].password;
@@ -40,7 +40,7 @@ export class EditprofileComponent implements OnInit {
         this.city=data[0].city;
         this.gender=data[0].gender;
         this.address=data[0].address;
-        
+
 
 
 
@@ -51,7 +51,7 @@ export class EditprofileComponent implements OnInit {
         // data[0].city=this.city;
         // data[0].gender=this.gender;
         // data[0].address=this.address;
-  
+
       }
     );
   }
@@ -62,22 +62,28 @@ export class EditprofileComponent implements OnInit {
           console.log(data);
         }
       );
-      this._route.navigate(['/viewprofile',this.emailId]);
+      this._route.navigate(['/viewprofile']);
   }
 
   viewProfile(){
-            this._route.navigate(['/viewprofile',this.emailId]);
+            this._route.navigate(['/viewprofile']);
     }
 
-    
+
   changePassword(){
-            this._route.navigate(['/changepassword',this.emailId]);
+            this._route.navigate(['/changepassword']);
   }
   onLogin()
 {
     this._route.navigate(['/login']);
 
-    
-}
 
+}
+onHome(){
+  this._route.navigate(['/viewproduct']);
+}
+onLogout(){
+  localStorage.clear();
+  this._route.navigate(['/login']);
+}
 }

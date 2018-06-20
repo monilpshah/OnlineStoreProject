@@ -3,16 +3,16 @@
     <div id="logo">
       <div id="logo_text">
         <!-- class="logo_colour", allows you to change the colour of the text -->
-        <h1><a  ><span class="logo_colour" (click)="onLogin()">monu_techguru</span></a></h1>
+        <h1><a  ><span class="logo_colour" (click)="onmonutechguru()">monu_techguru</span></a></h1>
 
       </div>
     </div>
     <div id="menubar">
       <ul id="menu">
         <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-        <li ><a  (click)="onSignup()">View Profile</a></li>
-        <li class="selected"><a  (click)="onLogin()">Edit Profile</a></li>
-        <li><a  (click)="onForget()" style="color:red">Logout</a></li>
+        <li ><a  (click)="viewProfile()">View Profile</a></li>
+        <li class="selected"><a  (click)="editProfile()">Edit Profile</a></li>
+        <li><a  (click)="onLogout()" style="color:red">Logout</a></li>
 
       </ul>
     </div>
@@ -56,6 +56,6 @@
   </div>      <!-- End Body part -->
 
   <div id="footer">
-    <p><a  (click)="onLogin()">Login</a> | <a (click)="onSignup()">Signup</a> | <a (click)="onForget()">Forgot Password?</a> </p>
+    <p><a  (click)="viewProfile()">View Profile</a> | <a (click)="editProfile()">Edit Profile</a> | <a (click)="onLogout()">Logout</a> </p>
   </div>
 </div>

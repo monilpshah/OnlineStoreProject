@@ -4,36 +4,37 @@
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
         <h1><a  ><span class="logo_colour" (click)="onLogin()">monu_techguru</span></a></h1>
-          
+
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a  (click)="onHome()">Home</a></li>
           <li><a  (click)="editProfile()">Edit Profile</a></li>
           <li><a  (click)="changePassword()">Change Password</a></li>
-          <li><a  (click)="onLogin()" style="color:red">Logout</a></li>
-          
+          <li><a  (click)="onLogout()" style="color:red">Logout</a></li>
+
         </ul>
       </div>
     </div>
 
 
     <div id="site_content">         <!-- Start Body part -->
-      
 
-            
+
+
             <div class="container">
 
  <h1>View Profile</h1>
 <div class="form-container">
 
-       
+
         <div class="form-group">
             <label >emailId</label>
             <input type="email" [(ngModel)]="emailId" class="form-control"  required />
         </div>
-        
+
         <div class="form-group">
             <label >Username</label>
             <input type="text" [(ngModel)]="userName" class="form-control" required />
@@ -42,17 +43,17 @@
             <label >Password</label>
             <input type="text" [(ngModel)]="password" class="form-control" required />
         </div>
-        
+
         <div class="form-group">
             <label >Mobile Number</label>
             <input type="Number" [(ngModel)]="mobileNo" class="form-control" required />
         </div>
-        
+
         <div class="form-group">
             <label >city</label>
             <input type="text" [(ngModel)]="city" class="form-control" required />
         </div>
-        
+
         <div class="form-group"  >
             <label >Gender</label>
             <div class="container  form-control">
@@ -67,7 +68,7 @@
             <button class="btn btn-primary" (click)="editProfile()">Edit Profile</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn btn-danger" (click)="changePassword()">Change Password</button>
         </div>
-    
+
 </div>
 
 </div>
@@ -82,6 +83,6 @@
 
 
     <div id="footer">
-      <p><a (click)="editProfile()">Edit Profile</a> | <a (click)="changePassword()">Change Password</a> | <a (click)="onLogin()" style="color:red">Logout</a> </p>
+      <p><a (click)="onHome()">Home</a> | <a (click)="editProfile()">Edit Profile</a> | <a (click)="changePassword()">Change Password</a> | <a (click)="onLogout()" style="color:red">Logout</a> </p>
     </div>
   </div>

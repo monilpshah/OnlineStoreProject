@@ -13,9 +13,9 @@ const arr:Routes=[
     {path:'',component:LoginComponent},
     {path:'login',component:LoginComponent},
     {path:'signup',component:SignupComponent},
-    {path:'viewprofile/:emailId',component:ViewprofileComponent},
-    {path:'editprofile/:emailId',component:EditprofileComponent},
-    {path:'changepassword/:emailId',component:ChangepasswordComponent},
+    {path:'viewprofile',component:ViewprofileComponent},
+    {path:'editprofile',component:EditprofileComponent},
+    {path:'changepassword',component:ChangepasswordComponent},
     {path:'forgetpass',component:ForgetpasswordComponent},
     {path:'viewproduct',component:ViewproductComponent},
     {path:'productdetails/:Id',component:ProductdetailsComponent}

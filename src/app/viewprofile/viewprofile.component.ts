@@ -19,15 +19,15 @@ export class ViewprofileComponent implements OnInit {
   city:string;
   gender:string;
   address:string;
-  
+
 
   constructor(private _route:Router,private _xyz:ViewprofileService,private _acroute:ActivatedRoute,private _serv:LoginService) { }
   ngOnInit() {
-    this.emailId=this._acroute.snapshot.params['emailId'];
+    this.emailId=localStorage.getItem('emailId');
     this._xyz.getLogById(this.emailId).subscribe(
       (data:any)=>
       {
-      
+
         this.emailId=data[0].emailId;
         this.userName=data[0].userName;
         this.password=data[0].password;
@@ -40,22 +40,29 @@ export class ViewprofileComponent implements OnInit {
     );
   }
 
-    
+
   onLogin()
 {
     this._route.navigate(['/login']);
 
-    
+
 }
 
     editProfile(){
-            this._route.navigate(['/editprofile',this.emailId]);
+            this._route.navigate(['/editprofile']);
   }
 
 
   changePassword(){
-            this._route.navigate(['/changepassword',this.emailId]);
+            this._route.navigate(['/changepassword']);
   }
 
+  onHome(){
+    this._route.navigate(['/viewproduct']);
+  }
+  onLogout(){
+    localStorage.clear();
+    this._route.navigate(['/login']);
+  }
 }
 
