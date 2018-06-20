@@ -12,6 +12,8 @@ import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
     EditprofileComponent,
     ChangepasswordComponent,
     ForgetpasswordComponent,
+    ViewproductComponent,
+    ProductdetailsComponent,
    
   ],
   imports: [

@@ -15,6 +15,6 @@ export class ViewprofileService {
     return this._http.get(this.url+emailId);
   }
 
-  
+
 
 }

@@ -28,7 +28,8 @@ this._serv.getLogById(new login(this.emailId,this.password)).subscribe(
         if(data.length==1)
         {
         console.log("success");
-        this._route.navigate(['/viewprofile',this.emailId]);
+        localStorage.setItem('emailId',this.emailId);
+        this._route.navigate(['/viewproduct']);
         }
         else
         {
@@ -37,7 +38,7 @@ this._serv.getLogById(new login(this.emailId,this.password)).subscribe(
         }
       }
     );
-    
+
 }
 onForget()
 {

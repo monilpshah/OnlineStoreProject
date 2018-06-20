@@ -5,7 +5,8 @@ import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
-
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 const arr:Routes=[
@@ -15,7 +16,9 @@ const arr:Routes=[
     {path:'viewprofile/:emailId',component:ViewprofileComponent},
     {path:'editprofile/:emailId',component:EditprofileComponent},
     {path:'changepassword/:emailId',component:ChangepasswordComponent},
-    {path:'forgetpass',component:ForgetpasswordComponent}
+    {path:'forgetpass',component:ForgetpasswordComponent},
+    {path:'viewproduct',component:ViewproductComponent},
+    {path:'productdetails/:Id',component:ProductdetailsComponent}
 ];
 
 export const routing=RouterModule.forRoot(arr);

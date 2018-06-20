@@ -1,0 +1,124 @@
+<div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a  ><span class="logo_colour" (click)="onLogin()">monu_techguru</span></a></h1>
+
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">s
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li ><a  (click)="onSignup()">Signup</a></li>
+          <li class="selected"><a  (click)="onLogin()">Login</a></li>
+          <li><a  (click)="onForget()">Forgot Password?</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">   <!-- Start Body part -->
+
+
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <div class="row" id="gradient">
+                      <div class="col-md-4" *ngFor="let item of description,let i=index">
+                          <img src="{{'http://localhost:3000/images/'+item.Img}}" class="img-responsive">
+                      </div>
+
+                  </div>
+                  <div class="row" *ngFor="let item of description,let i=index">
+                      <div class="tabs_div">
+
+                          <div>
+                              <table class="table">
+                                  <tbody>
+                                      <tr>
+                                          <td class="success">Product Name: </td>
+                                          <td>{{item.Name}}</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="success">Price: </td>
+                                          <td>{{item.Price}}</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="success">Product Quantity: </td>
+                                          <td>{{item.Qty}}</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="success">Product Mfg: </td>
+                                          <td>{{item.Mfg}}</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="success">Product Available: </td>
+                                          <td>{{item.Soh}}</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="success">Product Color: </td>
+                                          <td>{{item.Color}}</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+
+      <style>
+          .pb-product-details-ul {
+              list-style-type: none;
+              padding-left: 0;
+              color: black;
+          }
+
+              .pb-product-details-ul > li {
+                  padding-bottom: 5px;
+                  font-size: 15px;
+              }
+
+          #gradient {
+              /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+31,a0d8ef+62 */
+              background: #feffff; /* Old browsers */
+              background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 31%, #a0d8ef 62%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(left, #feffff 0%,#ddf1f9 31%,#a0d8ef 62%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to right, #feffff 0%,#ddf1f9 31%,#a0d8ef 62%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 */
+              border: 1px solid #f2f2f2;
+              padding: 20px;
+          }
+
+          #hits {
+              border-right: 1px solid white;
+              border-left: 1px solid white;
+              vertical-align: middle;
+              padding-top: 15px;
+              font-size: 17px;
+              color: white;
+          }
+
+          #fan {
+              vertical-align: middle;
+              padding-top: 15px;
+              font-size: 17px;
+              color: white;
+          }
+
+          .pb-product-details-fa > span {
+              padding-top: 20px;
+          }
+      </style>
+
+
+
+
+
+
+
+
+
+    </div>      <!-- End Body part -->
+
+    <div id="footer">
+      <p><a  (click)="onLogin()">Login</a> | <a (click)="onSignup()">Signup</a> | <a (click)="onForget()">Forgot Password?</a> </p>
+    </div>
+  </div>
