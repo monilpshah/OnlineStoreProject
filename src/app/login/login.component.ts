@@ -9,7 +9,7 @@ import { LoginService } from '../login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+i:number;
   emailId:string;
   password:string;
   parr:string[]=[];
